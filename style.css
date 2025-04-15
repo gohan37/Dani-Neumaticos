@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'DaniFont';
+    src: url('./fuentes/ProtestStrike-Regular.ttf') format('truetype');
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body {
+    background-color: black;
+    background-image: url('img/fondo\ 5.jpg');
+    background-size: 1100px;          /* cubre toda la pantalla */
+    background-repeat: no-repeat;    /* no se repite */
+    background-position: bottom right;     /* centrada siempre */
+    background-attachment: fixed; 
+       
+  }
+header {
+
+    background: radial-gradient(circle at center, rgba(255, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra vertical */
+    align-items: center;     /* centra horizontal */
+    height: 200px; /* o lo que necesites */
+    text-align: center;
+  }
+ h1 {
+    color: aliceblue;
+    font-family: 'DaniFont';
+    font-size: 6rem;
+    margin: 0;
+  }
+    h2 {
+        color: rgb(162, 163, 163);
+       width: auto;
+        height:auto;
+        font-size: 2.5rem;
+        margin: 0;
+    }
+    @keyframes descensoOlimpico {
+        0% {
+          transform: translateY(-200px);
+          opacity: 0;
+        }
+        60% {
+          transform: translateY(30px);
+          opacity: 1;
+        }
+        80% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      
+      header {
+        animation: descensoOlimpico 3s ease-out;
+        background-color: rgba(0, 0, 0, 0.7); /* ejemplo, ajustalo a tu diseño */
+        padding: 20px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-size: 2rem;
+        font-weight: bold;
+        position: relative;
+        z-index: 2;
+      }
+      /* Estilo para la tarjetas*/
+     section{
+
+    flex: 1;
+     }
+      .tarjetas {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 40px;
+      }
+      
+      .card {
+        position: relative;
+        width: 250px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(156, 156, 156, 0.5);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+      
+      .card:hover {
+        transform: scale(1.05);
+      }
+      
+      .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: brightness(0.7); /* oscurece la imagen un poco */
+      }
+      
+      .card h3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1.8rem;
+        font-family: 'poppins', sans-serif;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        border-radius: 10px;
+        
+      }
+     
+      
+      
+     
+      footer {
+        background: radial-gradient(circle at center, rgba(59, 58, 58, 0.6) 0%, rgba(0, 0, 0, 0.8) 70%);
+        color: blanchedalmond;
+        text-align: center;
+        padding: 30px 20px;
+        font-size: 1rem;
+        z-index: 10;
+        position: relative;
+      }
+      
